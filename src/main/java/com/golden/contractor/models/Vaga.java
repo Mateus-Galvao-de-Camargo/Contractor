@@ -1,5 +1,6 @@
 package com.golden.contractor.models;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 import  java.util.List;
@@ -13,63 +14,38 @@ import jakarta.persistence.OneToMany;
 
 import jakarta.validation.constraints.NotEmpty;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
 public class Vaga implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
     private long codigo;
 
     @NotEmpty
+    @Getter
+    @Setter
     private String nome;
 
     @NotEmpty
+    @Getter
+    @Setter
     private String data;
 
     @NotEmpty
+    @Getter
+    @Setter
     private String salario;
 
     @OneToMany(mappedBy = "vaga", cascade = CascadeType.REMOVE)
+    @Getter
+    @Setter
     private List<Candidato> candidatos;
 
-    public long getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(@NotEmpty long codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(@NotEmpty String nome) {
-        this.nome = nome;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(@NotEmpty String data) {
-        this.data = data;
-    }
-
-    public String getSalario() {
-        return salario;
-    }
-
-    public void setSalario(@NotEmpty String salario) {
-        this.salario = salario;
-    }
-
-    public List<Candidato> getCandidatos() {
-        return candidatos;
-    }
-
-    public void setCandidatos(List<Candidato> candidatos) {
-        this.candidatos = candidatos;
-    }
 }
