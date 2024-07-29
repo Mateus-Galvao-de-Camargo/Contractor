@@ -36,6 +36,11 @@ public class Vaga implements Serializable {
     @NotEmpty
     @Getter
     @Setter
+    private String descricao;
+
+    @NotEmpty
+    @Getter
+    @Setter
     private String data;
 
     @NotEmpty
