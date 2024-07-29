@@ -51,9 +51,8 @@ html {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@
--ms-viewport {
-	width: device-width;
+@-ms-viewport {
+	width: auto;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav,
@@ -5002,19 +5001,15 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 	color: #040505;
 }
 
-@
--webkit-keyframes progress-bar-stripes {from { background-position:1rem0;
-	
-}
-
-to {
+@-webkit-keyframes progress-bar-stripes {
+	from { background-position: 1rem 0;
+	} to {
 	background-position: 0 0;
 }
 
 }
-@
-keyframes progress-bar-stripes {from { background-position:1rem0;
-	
+@keyframes progress-bar-stripes {from { background-position:1rem 0;
+
 }
 
 to {
@@ -5661,7 +5656,7 @@ button.close {
 }
 
 .bs-popover-top .arrow, .bs-popover-auto[x-placement^="top"] .arrow {
-	bottom: calc(( 0.5rem + 1px)* -1);
+	bottom: calc(( 0.5rem + 1px) * -1);
 }
 
 .bs-popover-top .arrow::before, .bs-popover-auto[x-placement^="top"] .arrow::before,
@@ -5846,8 +5841,7 @@ button.close {
 	transform: translateX(0);
 }
 
-@
-supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
 	{ .carousel-item-next .carousel-item-left,
 	.carousel-item-prev.carousel-item-right { -webkit-transform:translate3d(0,
 	0, 0);
@@ -5860,8 +5854,7 @@ supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3
 	transform: translateX(100%);
 }
 
-@
-supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
 	{ .carousel-item-next , .active.carousel-item-right { -webkit-transform:translate3d(100%,
 	0, 0);
 	transform: translate3d(100%, 0, 0);
@@ -5873,8 +5866,7 @@ supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3
 	transform: translateX(-100%);
 }
 
-@
-supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
 	{ .carousel-item-prev , .active.carousel-item-left { -webkit-transform:translate3d(-100%,
 	0, 0);
 	transform: translate3d(-100%, 0, 0);
@@ -5904,8 +5896,7 @@ supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3
 	transform: translateX(0);
 }
 
-@
-supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d))
 	{ .carousel-fade .carousel-item-next, .carousel-fade
 	.carousel-item-prev, .carousel-fade .carousel-item.active,
 	.carousel-fade .active.carousel-item-left, .carousel-fade
@@ -7309,8 +7300,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus
 	z-index: 1030;
 }
 
-@
-supports ((position: -webkit-sticky) or (position: sticky)) { .sticky-top
+@supports ((position: -webkit-sticky) or (position: sticky)) { .sticky-top
 	{ position:-webkit-sticky;
 	position: sticky;
 	top: 0;
